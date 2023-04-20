@@ -1,0 +1,70 @@
+﻿<Window x:Class="RoomLiving.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RoomLiving"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1200">
+    <Grid Margin="10,0,10,-6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="104*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid Margin="-5,0,989,55" Background="#FFABF58A" Height="490" VerticalAlignment="Bottom" Grid.RowSpan="2">
+            <TextBox x:Name="TBLengthR" TextWrapping="Wrap" Margin="94,48,12,413"/>
+            <TextBox x:Name="TBWidthR" TextWrapping="Wrap" Margin="90,82,9,384"/>
+
+        </Grid>
+        <Grid Margin="196,2,759,53" Background="#FFE2A6F9" Grid.RowSpan="2">
+            <TextBox x:Name="TBLengthL" TextWrapping="Wrap" Margin="92,34,49,425"/>
+            <TextBox x:Name="TBNumW" TextWrapping="Wrap" Margin="86,114,32,348" RenderTransformOrigin="0.5,0.5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-719.478"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+            <TextBox x:Name="TBWidthL" TextWrapping="Wrap" Margin="90,70,49,388"/>
+        </Grid>
+        <Grid Margin="416,0,504,55" Background="#FFB0F0F1" Grid.RowSpan="2">
+            <TextBox x:Name="TBLengthO" TextWrapping="Wrap" Margin="88,48,44,416"  RenderTransformOrigin="0.5,0.5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.249"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+            <TextBox x:Name="TBWidthO" TextWrapping="Wrap" Margin="90,83,22,380"/>
+            <TextBox x:Name="TBNumS" TextWrapping="Wrap" Margin="90,127,37,333"/>
+        </Grid>
+        <Grid Margin="671,0,0,55" Background="#FF848484" Grid.RowSpan="2"/>
+
+        <Button x:Name="BAddRoom" Content="Добавить" Margin="0,486,1018,9" Background="#FFCECBCB" Grid.Row="1" Click="BAddRoom_Click_1"/>
+        <Button x:Name="BAddOffice" Content="Добавить" Margin="466,471,590,14" Grid.Row="1" Click="BAddOffice_Click"/>
+        <Button x:Name="BAddLivingRoom" Content="Добавить" Margin="232,477,804,10" Grid.Row="1" Click="BAddLivingRoom_Click_1"/>
+        <Button x:Name="BGetList" Content="Выдать" Margin="710,484,168,36" Grid.Row="1" Grid.RowSpan="2" Click="BGetList_Click_1"/>
+        <Label Content="Помещение" Margin="0,7,1082,496" RenderTransformOrigin="0.094,-0.257" FontWeight="Bold" Grid.RowSpan="2"/>
+        <Label Content="Список помещений" Margin="676,2,-147,354" FontWeight="Bold" Grid.RowSpan="2"/>
+        <Label Content="Число розеток" Margin="416,96,652,384" RenderTransformOrigin="3.015,5.233" Grid.Row="1"/>
+        <Label Content="Ширина" Margin="421,56,647,433" Grid.Row="1"/>
+        <Label Content="Длина" Margin="421,17,647,469" Grid.Row="1"/>
+        <Label Content="Офис" Margin="421,2,672,487" FontWeight="Bold" Grid.RowSpan="2"/>
+        <Label Content="Число окон" Margin="196,90,880,384" Grid.Row="1"/>
+        <Label Content="Ширина" Margin="191,53,888,430" Grid.Row="1" RenderTransformOrigin="0.226,-1.013"/>
+        <Label Content="Длина" Margin="191,10,876,469" Grid.Row="1"/>
+        <Label Content="Жилое помещение" Margin="196,7,822,501" FontWeight="Bold" Grid.RowSpan="2"/>
+        <Label Content="Ширина" Margin="5,58,1054,435" Grid.Row="1"/>
+        <Label Content="Длина" Margin="5,25,1023,444" Grid.Row="1"/>
+        <Label x:Name="ListRooms" Content="" Margin="698,25,26,187" Grid.Row="1"/>
+
+
+    </Grid>
+</Window>
